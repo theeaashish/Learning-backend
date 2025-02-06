@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <!-- <h1>2 + 2 = <%=2+2 %></h1> -->
+    <div class="bg-zinc-900 min-h-screen text-white flex gap-4 flex-col w-full p-10">
+        <a class="text-xs text-blue-500 mb-10 inline-block" href="/">Go back to home</a>
+        <form action="/edit" method="post" class="flex flex-col gap-4 w-full">
+            <input
+              class="bg-zinc-800 w-1/4 px-8 py-3 rounded-md text-zinc-400"
+              type="text"
+              name="Previous"
+              placeholder="Previous name"
+              value="<%= filename %>"
+            />
+            <input
+              class="bg-zinc-800 w-1/4 px-8 py-3 rounded-md"
+              type="text"
+              name="New"
+              placeholder="New name"
+            />
+
+            <input
+              type="submit"
+              value="Update"
+              class="bg-blue-600 py-2 w-30 cursor-pointer rounded-md"
+            />
+          </form>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
